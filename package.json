@@ -1,0 +1,19 @@
+{
+  "name": "JSGridExpressJSSample",
+  "version": "1.0.0",
+  "description": "Sample project for jsGrid with ExpressJS REST service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tabalinas/jsgrid-express.git"
+  },
+  "author": "Artem Tabalin <tabalinas@gmail.com> (http://tabalin.net/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tabalinas/jsgrid-express/issues"
+  },
+  "homepage": "https://github.com/tabalinas/jsgrid-express"
+}
