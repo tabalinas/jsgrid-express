@@ -23,10 +23,40 @@ var getClientFilter = function(query) {
     return result;
 };
 
+var prepareItem = function(source) {
+    var result = source;
+    result.Married = source.Married === 'true' ? true : false;
+    result.Country = parseInt(source.Country, 10);
+    return result;
+};
+
 router.get('/', function(req, res, next) {
     db.find(getClientFilter(req.query), function(err, items) {
         res.json(items);
     });
 });
+
+router.post('/', function(req, res, next) {
+    db.insert(prepareItem(req.body), function(err, item) {
+        res.json(item);
+    });
+});
+
+router.put('/', function(req, res, next) {
+    var item = prepareItem(req.body);
+
+    db.update({ _id: item._id }, item, {}, function(err) {
+        res.json(item);
+    });
+});
+
+router.delete('/', function(req, res, next) {
+    var item = prepareItem(req.body);
+
+    db.remove({ _id: item._id }, {}, function(err) {
+        res.json(item);
+    });
+});
+
 
 module.exports = router;
