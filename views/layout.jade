@@ -2,6 +2,11 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/css/style.css')
+    block head
   body
+    header
+      h1= title
     block content
+    script(src='http://code.jquery.com/jquery-1.11.3.min.js')
+    block scripts

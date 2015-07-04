@@ -1,5 +1,12 @@
 extends layout
 
+block head
+  link(href='http://js-grid.com/css/jsgrid.min.css', rel='stylesheet')
+  link(href='http://js-grid.com/css/jsgrid-theme.min.css', rel='stylesheet')
+
 block content
-  h1= title
-  p Welcome to #{title}
+  div#jsGrid
+
+block scripts
+  script(src='http://js-grid.com/js/jsgrid.min.js')
+  script(src='/js/sample.js')
