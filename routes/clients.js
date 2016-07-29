@@ -16,7 +16,7 @@ var getClientFilter = function(query) {
         result.Married = query.Married === 'true' ? true : false;
     }
 
-    if(query.Country !== '0') {
+    if(query.Country && query.Country !== '0') {
         result.Country = parseInt(query.Country, 10);
     }
 
