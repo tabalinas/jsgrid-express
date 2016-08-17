@@ -1,7 +1,7 @@
 {
   "name": "JSGridExpressJSSample",
   "version": "1.0.0",
-  "description": "Sample project for jsGrid with ExpressJS REST service",
+  "description": "Sample project for jsGrid with Node.js Express REST service",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
